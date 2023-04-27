@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #while loop prints string 10x
 
-s=0
+s=1
 
 while [ $s -le 10 ];
 do
