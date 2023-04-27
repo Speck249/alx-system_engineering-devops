@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#while loop prints string 10x
+
+s=0
+
+while [ $s -le 10 ];
+do
+ echo "Best School"
+ ((s++))
+done
