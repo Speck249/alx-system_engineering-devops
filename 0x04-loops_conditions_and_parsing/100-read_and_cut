@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#displays file content
+
+file_name = /etc/passwd
+
+while IFS= read -r line
+do
+  echo $line | cut -f 1,3,6 -d ":"
+done < "$file_name"
