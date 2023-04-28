@@ -9,7 +9,7 @@ do
 
   case $s in
       4)
-	 echo -n "bad luck from China"
+	 echo "bad luck from China"
          ;;
 
       9)
