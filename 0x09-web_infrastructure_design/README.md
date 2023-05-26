@@ -1,10 +1,10 @@
 # Web Infrastructure Design
 ---
 # Project Expectations
-* Draw diagrams representing various Web Infrastructure Design.
+* Draw diagrams representing various Web Infrastructure Designis
 * Explain all components & their corresponding functions.
 * Explain system redundancy.
-* Understand LAMP, SPOF & QPS.
+* Understand mentioned acronyms: LAMP, SPOF & QPS.
 
 ## Key Concepts
 * Web Client
