@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Install nginx
-apt-get update
+apt-get update -y
 apt-get install nginx -y
 vi /var/www/html/index.html
+#insert Hello World into new file
 service nginx start
