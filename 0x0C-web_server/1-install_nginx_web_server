@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Install nginx
+# Have nginx return 'Hello World!' with GET request via curl
+
+apt-get update
+apt-get install nginx -y
+echo 'Hello World' > /var/www/html/index.html
+service nginx start
