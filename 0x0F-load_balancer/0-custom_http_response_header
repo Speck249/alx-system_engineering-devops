@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+#Install nginx
+sudo apt-get update
+sudo apt-get install nginx -y
+
+#Create and display webpage
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+#Create custom 404 page
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+
+#Create and implement 301 status code and 404 message
+echo "server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        root /var/www/html;
+        index index.html index.htm index.nginx-debian.html;
+        server_name _;
+        location /redirect_me {
+                return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+        }
+        error_page 404 /404;
+        location = /404.html {
+           internal;
+           root /var/www/html;
+        }
+}" > /etc/nginx/sites-available/default
+
+#Create and implement custom HTTP header
+echo "http {
+        sendfile on;
+        tcp_nopush on;
+        tcp_nodelay on;
+        keepalive_timeout 65;
+        types_hash_max_size 2048;
+        include /etc/nginx/mime.types;
+        default_type application/octet-stream;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE
+        ssl_prefer_server_ciphers on;
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log;
+        gzip on;
+        include /etc/nginx/conf.d/*.conf;
+        include /etc/nginx/sites-enabled/*;
+        add_header X-Served-By $hostname;
+}" > /etc/nginx/nginx.conf
+
+#Start nginx
+sudo service nginx start
