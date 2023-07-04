@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Puppet manifest configures custom HTTP header
 class nginx {
       package { 'nginx':
        ensure => present
