@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 #Install HAProxy
+sudo apt-get update
 sudo apt-get -y install haproxy
 
 #Configure /etc/haproxy/haproxy.cfg
 add_config=$(cat << EOF
-frontend my-front-end
-         mode http
+frontend my-frontend
          bind *80
+         mode http
          default_backend my-servers
 backend my-servers
          balance roundrobin
