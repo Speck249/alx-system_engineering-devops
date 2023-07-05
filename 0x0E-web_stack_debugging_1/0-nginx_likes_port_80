@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Solution: enable default server block & make it active.
+# Copy default configuration file from sites-available to
+# the sites-enabled directory then restart nginx & check
+# status.
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+sudo service nginx start
+# sudo service nginx status
