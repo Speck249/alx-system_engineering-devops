@@ -1,19 +1,21 @@
 #!/usr/bin/env bash
 #Install HAProxy
+sudo add-apt-repository ppa:vbernat/haproxy-2.4
 sudo apt-get update
 sudo apt-get -y install haproxy
+sudo service haproxy start
 
 #Configure /etc/haproxy/haproxy.cfg
-add_config=$(cat << EOF
+add_config=$(cat <<-END
 frontend my-frontend
-         bind *80
+         bind *:80
          mode http
          default_backend my-servers
 backend my-servers
          balance roundrobin
-         server 207976-web-01 54.90.42.36:80
-         server 207976-web-02 54.165.174.221:80
-EOF
+         server 207976-web-01 54.90.42.36:80 check
+         server 207976-web-02 100.25.34.43:80 check
+END
 )
 
 echo "$add_config" | sudo tee -a /etc/haproxy/haproxy.cfg
