@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 # Install nginx and display string
-apt-get update
-apt-get install nginx -y
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo service nginx start
+# Insert string into new html file.
 echo "Hello World!" | sudo tee /var/www/html/index.html
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+# Create custom redirect page.
 echo "server {
         listen 80 default_server;
         listen [::]:80 default_server;
@@ -13,10 +15,10 @@ echo "server {
         location /redirect_me {
                 return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
         }
-        error_page 404 /404;
-        location = /404.html {
-           internal;
-           root /var/www/html;
-        }
-}" > /etc/nginx/sites-available/default 
-sudo service nginx start
+}" > /etc/nginx/sites-enabled/default
+# Insert string into custom error page.
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/my_404.html
+# Configure error page.
+sudo sed -i 's@listen 80 default_server;@listen 80 default_server;\n\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}@' /etc/nginx/sites-enabled/default
+# restart nginx
+sudo service nginx restart
