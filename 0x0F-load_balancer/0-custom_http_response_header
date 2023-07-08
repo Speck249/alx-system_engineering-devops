@@ -1,17 +1,11 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC2154
-
-#Install nginx
+# Install nginx and display string
 sudo apt-get update
-sudo apt-get install nginx -y
-
-#Create and display webpage
+sudo apt-get -y install nginx
+sudo service nginx start
+# Insert string into new html file.
 echo "Hello World!" | sudo tee /var/www/html/index.html
-
-#Create custom 404 page
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
-
-#Create and implement 301 status code and 404 message
+# Create custom redirect page.
 echo "server {
         listen 80 default_server;
         listen [::]:80 default_server;
@@ -21,12 +15,11 @@ echo "server {
         location /redirect_me {
                 return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
         }
-        error_page 404 /404;
-        location = /404.html {
-           internal;
-           root /var/www/html;
-        }
-}" > /etc/nginx/sites-available/default
+}" > /etc/nginx/sites-enabled/default
+# Insert string into custom error page.
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/my_404.html
+# Configure error page.
+sudo sed -i 's@listen 80 default_server;@listen 80 default_server;\n\terror_page 404 /my_404.html;\n\tlocation = /my_404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}@' /etc/nginx/sites-enabled/default
 
 #Create and implement custom HTTP header
 echo "http {
@@ -48,4 +41,4 @@ echo "http {
 }" > /etc/nginx/nginx.conf
 
 #Start nginx
-sudo service nginx start
+sudo service nginx restart
