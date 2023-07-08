@@ -19,6 +19,6 @@ echo "server {
 # Insert string into custom error page.
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/my_404.html
 # Configure error page.
-sudo sed -i 's@listen 80 default_server;@listen 80 default_server;\n\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}@' /etc/nginx/sites-enabled/default
+sudo sed -i 's@listen 80 default_server;@listen 80 default_server;\n\terror_page 404 /my_404.html;\n\tlocation = /my_404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}@' /etc/nginx/sites-enabled/default
 # restart nginx
 sudo service nginx restart
