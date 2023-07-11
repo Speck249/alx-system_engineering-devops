@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Function implements DNS dig.
+
+dig_dns () {
+    local domain="$1"
+    local subdomain="$2"
+
+    query=$(dig "$subdomain"."$domain" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ')
+    echo "$subdomain $query" | awk '{print "The subdomain " $1 " is a " $2 " record and points to " $3}'
+}
+
+if [ "$#" -eq 1 ]
+then
+   domain="$1"
+   dig_dns "$domain" "www"
+   dig_dns "$domain" "lb-01"
+   dig_dns "$domain" "web-01"
+   dig_dns "$domain" "web-02"
+elif [ "$#" -eq 2 ]
+then
+   domain="$1"
+   subdomain="$2"
+   dig_dns "$domain" "$subdomain"
+fi
