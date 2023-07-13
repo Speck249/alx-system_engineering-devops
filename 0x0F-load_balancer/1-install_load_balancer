@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 #Install HAProxy
-sudo add-apt-repository ppa:vbernat/haproxy-2.4
 sudo apt-get update
 sudo apt-get -y install haproxy
 sudo service haproxy start
 
 #Configure /etc/haproxy/haproxy.cfg
 add_config=$(cat <<-END
-frontend my-frontend
+frontend front-end
          bind *:80
          mode http
-         default_backend my-servers
-backend my-servers
+         default_backend nginx-servers
+
+backend nginx-servers
          balance roundrobin
          server 207976-web-01 54.90.42.36:80 check
          server 207976-web-02 100.25.34.43:80 check
