@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Change user and group ID.
+usermod -u 101 nginx
+groupmod -g 101 nginx
+
+# Update log and data directories ownerships.
+chown -R nginx:nginx /var/lib/nginx
+chown -R nginx:nginx /var/log/nginx
+
+# Modify nginx configurations files.
+sed -i 's/user www-data;/user nginx;/' /etc/nginx/nginx.conf
+sed -i 's/listen 80 default_server;/listen 8080 default_server;\n    listen [::]:8080 default_server;/' /etc/nginx/sites-available/default
+
+# Restart nginx
+systemctl restart nginx
