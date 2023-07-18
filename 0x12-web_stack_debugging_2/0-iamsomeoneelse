@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Script prints output of whoami
-sudo -u "$1" whoami
+# Script uses sudo privileges
+sudo -u "$1" 'whoami'
