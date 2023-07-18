@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Script prints user name
+
+username=$1
+# print out username
+sudo -u "$username" whoami
