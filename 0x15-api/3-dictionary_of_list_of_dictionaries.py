@@ -8,9 +8,9 @@ import requests
 
 if __name__ == "__main__":
     response = requests.get(f"https://jsonplaceholder"
-                            f".typicode.com/todos")
+                            f".typicode.com/users")
 
-    todos = response.json()
+    employees = response.json()
     """
     Retrieve employee TODO list via
     request to API and parse response.
@@ -18,21 +18,22 @@ if __name__ == "__main__":
 
     employee_todo_list = {}
 
-    for todo in todos:
-        employee_id = todo["userId"]
-        if employee_id not in employee_todo_list:
-            employee_todo_list[employee_id] = []
+    for employee in employees:
+        employee_id = employee.get("id")
+        employee_name = employee.get("username")
 
-            response = requests.get(f"https://jsonplaceholder"
-                                    f".typicode.com/users/{employee_id}")
-            employee_name = response.json()["name"]
+        response = requests.get(f"https://jsonplaceholder"
+                                f".typicode.com/users/{employee_id}/todos/")
+        todos = response.json()
 
-        task = {
+        employee_todo_list[employee_id] = []
+
+        for todo in todos:
+            employee_todo_list[employee_id].append({
                 "username": employee_name,
-                "task": todo["title"],
-                "completed": todo["completed"]
-        }
-        employee_todo_list[employee_id].append(task)
+                "task": todo.get("title"),
+                "completed": todo.get("completed")
+            })
 
     filename = "todo_all_employees.json"
     with open(filename, "w") as json_file:
