@@ -18,7 +18,8 @@ Retrieve employee TODO list via
 request to API and parse response.
 """
 
-response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}")
+response = requests.get(f"https://jsonplaceholder"
+                        f".typicode.com/users/{employee_id}")
 employee_name = response.json()["username"]
 
 filename = (f"{employee_id}.json")
