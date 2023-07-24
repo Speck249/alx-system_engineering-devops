@@ -29,7 +29,7 @@ if __name__ == "__main__":
     with open(filename, 'w', newline="") as csv_file:
         """ Writes employee TOD list progress to a csv file. """
         for todo in todos:
-            csv_file.write('"{},"{}","{}","{}"\n'.format(employee_id,
-                                                         employee_name,
-                                                         todo["completed"],
-                                                         todo["title"]))
+            csv_file.write('"{}","{}","{}","{}"\n'.format(employee_id,
+                                                          employee_name,
+                                                          todo["completed"],
+                                                          todo["title"]))
