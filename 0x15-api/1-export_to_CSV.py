@@ -28,16 +28,8 @@ if __name__ == "__main__":
 
     with open(filename, 'w', newline="") as csv_file:
         """ Writes employee TOD list progress to a csv file. """
-        writer = csv.writer(csv_file)
-        writer.writerow(["USER_ID", "USERNAME",
-                        "TASK_COMPLETED_STATUS", "TASK_TITLE"])
-
         for todo in todos:
-            if not todo["completed"]:
-                writer.writerow([employee_id, employee_name,
-                                "False", todo["title"]])
-
-        for todo in todos:
-            if todo["completed"]:
-                writer.writerow([employee_id, employee_name,
-                                "True", todo["title"]])
+            csv_file.write('"{}, "{}", "{}", "{}"\n'.format(employee_id,
+                                                            employee_name,
+                                                            todo["completed"],
+                                                            todo["title"]))
