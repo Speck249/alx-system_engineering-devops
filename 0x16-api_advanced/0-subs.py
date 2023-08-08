@@ -11,7 +11,9 @@ def number_of_subscribers(subreddit):
     Function returns number of total subscribers
     for a given subreddit.
     """
-    headers = {'User-Agent', 'Customer User Agent'}
+    headers = {
+        'User-Agent', 'Customer User Agent'
+    }
     url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
     response = requests.get(url, headers=headers, allow_redirects=False)
     
