@@ -12,12 +12,12 @@ def number_of_subscribers(subreddit):
     for a given subreddit.
     """
     headers = {'User-Agent', 'Customer User Agent'}
-    url = f'https://www.reddit.com/r/{subreddit}/about.json'
+    url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
     response = requests.get(url, headers=headers, allow_redirects=False)
     
     if reponse.status_code == 200:
         data = response.json()
         subscribers = data['data']['subscribers']
         return subscribers
-    else
+    else:
         return 0
