@@ -1,18 +1,18 @@
 # Postmortem: Database Lock Incident
 
 **Incident Summary:**
-- On July 23, 2023, a database lock incident was experienced which impacted the website functionality and performance, affecting user experience and data consistencies.
+- On _July 23, 2023_, a database lock incident was experienced which impacted the website functionality and performance, affecting user experience and data consistencies.
 * This postmortem aims to provide a detailed incident analysis along with its root cause, the actions taken to resolve it, and recommendations to prevent similar incidents in the future.
 
 **Incident Timeline:**
 NOTE - All times are in East African Time(EAT).
-- July 23, 2023, 12:34pm: Incident identified - Users reported slow website/application performance and errors.
-* July 23, 2023, 12:37pm: Initial investigation initiated - IT Operations team identified the issue as a database lock.
-+ July 23, 2023, 12:55pm: Incident escalated to the Database Administration team for further analysis and resolution.
-- July 23, 2023  13:17pm: Root cause identified - Concurrent write operations leading to lock contention.
-* July 23, 2023  13:23pm: Immediate mitigation actions implemented - Adjusted query optimization, increased database resources, and optimized locking strategy.
-+ July 23, 2023  13:51pm: Website performance gradually restored - User reports of slow performance and errors decreased.
-- July 23, 2023  14:21pm: Incident resolved - Normal website/application functionality and performance restored.
+- _July 23, 2023_, _12:34pm_: Incident identified - Users reported slow website/application performance and errors.
+* _July 23, 2023_, _12:37pm_: Initial investigation initiated - IT Operations team identified the issue as a database lock.
++ _July 23, 2023_, _12:55pm_: Incident escalated to the Database Administration team for further analysis and resolution.
+- _July 23, 2023_, _13:17pm_: Root cause identified - Concurrent write operations leading to lock contention.
+* _July 23, 2023_, _13:23pm_: Immediate mitigation actions implemented - Adjusted query optimization, increased database resources, and optimized locking strategy.
++ _July 23, 2023_, _13:51pm_: Website performance gradually restored - User reports of slow performance and errors decreased.
+- _July 23, 2023_, _14:21pm_: Incident resolved - Normal website/application functionality and performance restored.
 
 **Root Cause:**
 - The root cause of the database lock incident was identified as concurrent write operations.
