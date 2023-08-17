@@ -1,7 +1,7 @@
 file { '/etc/default/nginx':
-  ensure  => file,
-  content => "ULIMIT=\"-n 4096\"\n",
-  notify  => Exec['nginx-restart'],
+  ensure   => file,
+  content  => "ULIMIT=\"-n 4096\"\n",
+  notify   => Exec['nginx-restart'],
 }
 
 exec { 'nginx-restart':
