@@ -1,16 +1,21 @@
-# System Engineering and DevOps
+# System Engineering and DevOps Course
 
-## Learning Objectives
-The System Engineering and DevOps Curriculum is focused on building a foundational understanding in Linux
-and Unix System Programming, Networking Principles, Web Architecture, and CI / CD. The projects contained
-within this repository focus on the aforementiond subject areas and their corresponding topics.
+## Course Description
+The ALX Full Stack Engineering Track's first 9 months aims to enable developers build a set of real-world, industry aligned
+skills. As the final sprint of the Foundations program, the System Engineering and DevOps course is geared towards developing
+foundational understanding in Linux and Unix System Programming, Networking Principles, Web Architecture, and CI / CD. 
 
-### Repository Content
+This repository contains curriculum focused subject areas broken down into corresponding project topics. Unless referring to Portfolio,
+'project' in ALX refers to a compilation of practical tasks that students must complete. Each project contains a thorough guideline to 
+navigating each given task, along with general outline of learning objectives and project requirements. The System Engineering and DevOps
+projects range from Scripting to Virtual Server configurations as well as Debugging exercises. 
+
+## Repository Content
  
-|   Topic      |          Project Topics              |
-| ------------ | ------------------------------------ |
-|   Bash       |  0x00-shell_basics                   |
-|              |  0x01-shell_permissions              |
+|       Topic           |               Project Topics                  |
+|---------------------- | --------------------------------------------- |
+|       Bash            |    (https://github.com/Speck249/alx-system_engineering-devops/tree/master/0x00-shell_basics)[0x00-shell_basics]                      |
+|                       |    ()[0x01-shell_permissions]              |
 |              |  0x02-shell_redirections             |
 |              |  0x03-shell_variables_and_expansions |
 |              |  0x04_loops_conditions_and_parsing   |
