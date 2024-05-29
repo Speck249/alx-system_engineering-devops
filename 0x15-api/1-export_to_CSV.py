@@ -1,35 +1,50 @@
 #!/usr/bin/python3
 """
-Module exports TODO list
-progress to csv file.
+Module lists todo list items of employee.
 """
+
 import csv
 import requests
 import sys
 
+
 if __name__ == "__main__":
     employee_id = sys.argv[1]
-    """ Collects emplyee ID. """
-
-    response = requests.get(f"https://jsonplaceholder"
-                            f".typicode.com/todos?userId={employee_id}")
-    todos = response.json()
+    url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
+    response = requests.get(url)
+    employee_info = response.json()
     """
-    Retrieve employee TODO list via
-    request to API and parse response.
+    Retrieve complete information about  employee
+    with target ID in JSON format.
     """
 
-    response = requests.get(f"https://jsonplaceholder"
-                            f".typicode.com/users/{employee_id}")
-    employee_name = response.json()["username"]
+    url = f'https://jsonplaceholder.typicode.com/todos?userId={employee_id}'
+    response = requests.get(url)
+    employee_todo_list = response.json()
+    """
+    Retrieve employee's todo list with the
+    given ID.
+    """
 
-    filename = (f"{employee_id}.csv")
-    """ Retrieve employee name and define csv file. """
+row_data = []
+for item in employee_todo_list:
+    """
+    Format each row to contain ID, username, task completion status
+    and all task titles, in this order then append to new list.
+    """
+    row = [
+        item['userId'],
+        employee_info['username'],
+        item['completed'],
+        item['title']
+        ]
+    row_data.append(row)
 
-    with open(filename, 'w', newline="") as csv_file:
-        """ Writes employee TOD list progress to a csv file. """
-        for todo in todos:
-            csv_file.write('"{}","{}","{}","{}"\n'.format(employee_id,
-                                                          employee_name,
-                                                          todo["completed"],
-                                                          todo["title"]))
+with open('USER_ID.csv', 'w', newline='') as csvFile:
+    """
+    Write into new CSV file the tasks belonging to an employee
+    according to defined format.
+    """
+    writer = csv.writer(csvFile)
+    for row in row_data:
+        writer.writerow(row)
