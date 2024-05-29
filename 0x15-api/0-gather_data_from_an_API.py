@@ -1,40 +1,45 @@
 #!/usr/bin/python3
 """
-Module returns information
-about TODO list progress.
+Module returns TODO list progress.
 """
 import requests
 import sys
 
+
 if __name__ == "__main__":
     employee_id = sys.argv[1]
-    """ Collects emplyee ID. """
+    """ Collect employee ID from Command Line. """
 
-    response = requests.get(f"https://jsonplaceholder"
-                            f".typicode.com/todos?userId={employee_id}")
-    todos = response.json()
+    url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
+    response = requests.get(url)
+    employee_name = response.json()['name']
     """
-    Retrieve employee TODO list via
-    request to API and parse response.
+    Retrieve complete information about employee with target ID
+    in JSON format then isolate name.
     """
 
+    url = f'https://jsonplaceholder.typicode.com/todos?userId={employee_id}'
+    response = requests.get(url)
+    employee_todo_list = response.json()
+    """
+    Retrieve employee's todo list with the
+    given ID.
+    """
+
+    total_tasks = len(employee_todo_list)
     total_completed_tasks = 0
-    total_tasks = len(todos)
-    completed_tasks_titles = []
+    completed_tasks = []
 
-    for todo in todos:
-        if todo["completed"]:
+    for tasks in employee_todo_list:
+        """
+        Count completed tasks and
+        compile them into new list.
+        """
+        if tasks['completed']:
+            completed_tasks.append(tasks['title'])
             total_completed_tasks += 1
-            completed_tasks_titles.append(todo["title"])
 
-    response = requests.get(f"https://jsonplaceholder"
-                            f".typicode.com/users/{employee_id}")
-
-    employee_name = response.json()["name"]
-    """ Retrieve employee name. """
-
-    print(f"Employee {employee_name} is done"
-          f" with tasks({total_completed_tasks}/{total_tasks}):")
-
-    for title in completed_tasks_titles:
-        print(f"\t {title}")
+    print(f'Employee {employee_name} is done with tasks('
+          f'{total_completed_tasks}/{total_tasks}):')
+    for item in completed_tasks:
+        print(f'\t{item}')
