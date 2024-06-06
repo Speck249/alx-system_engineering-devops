@@ -1,14 +1,9 @@
 # System Engineering and DevOps Course
 
 ## Course Description
-The ALX Full Stack Engineering Track's first 9 months aims to enable developers build a set of real-world, industry aligned
-skills. As the final sprint of the Foundations program, the System Engineering and DevOps course is geared towards developing
-foundational understanding in Linux and Unix System Programming, Networking Principles, Web Architecture, and CI / CD. 
+The ALX Full Stack Engineering Track's first 9 months aim to build a set of real-world, industry aligned skills. As the third sprint of the Foundations program, the System Engineering and DevOps course is geared towards developing foundational understanding in Linux and Unix System Programming, Networking Principles, Web Architecture, and Continuous Integration / Continuous Deployment. 
 
-This repository contains curriculum focused subject areas broken down into corresponding project topics. Unless referring to Portfolio,
-'project' in ALX refers to a compilation of practical tasks that students must complete. Each project contains a thorough guideline to 
-navigating each given task, along with general outline of learning objectives and project requirements. The System Engineering and DevOps
-projects range from Scripting to Virtual Server configurations as well as Debugging exercises. 
+Instead of the typical terminological usage, 'Project' in ALX refers to a compilation of practical tasks that test students' knowledge about curriculum specific topics. Each project must be completed within a 24 hour timeline and although projects may advance on an earlier subject area, no two projects focus on the same topic. Projects are packed with thorough guidelines, general outlines of learning objectives and requirements. The System Engineering and DevOps projects range from scripting and virtual server configurations to debugging exercises. 
 
 ## Repository Content
  
@@ -54,3 +49,5 @@ projects range from Scripting to Virtual Server configurations as well as Debugg
 * [0x12-web_stack_debugging_2](https://github.com/Speck249/alx-system_engineering-devops/tree/master/0x12-web_stack_debugging_2)
 * [0x17-web_stack_debugging_3](https://github.com/Speck249/alx-system_engineering-devops/tree/master/0x17-web_stack_debugging_3)
 * [0x1B-web_stack_debugging_4](https://github.com/Speck249/alx-system_engineering-devops/tree/master/0x1B-web_stack_debugging_4)
+
+![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
