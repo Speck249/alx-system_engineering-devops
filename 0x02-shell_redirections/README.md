@@ -1,4 +1,4 @@
-# Shell, I/O Redirections and filters
+# Shell - I/O Redirections and Filters
 
 ## Learning Objectives
 * head, tail, find, wc, sort, uniq, grep, tr do

@@ -1,4 +1,4 @@
-# Shell, Basics
+# Shell - Basics
 
 ## Learning Objectives
 * Linux Operating System
@@ -21,6 +21,5 @@
 * End files with a new line
 * Files' first line must be exactly #!/bin/bash
 * Scripts must be executable.
-
 
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)

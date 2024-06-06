@@ -1,4 +1,4 @@
-# Shell, init files, variables and expansions
+# Shell - Init files, Variables and Expansions
 
 ## Learning Objectives
 * Output of $ ls -l *.txt

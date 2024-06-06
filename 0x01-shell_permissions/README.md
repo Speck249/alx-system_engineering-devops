@@ -1,4 +1,4 @@
-# Shell, Permissions
+# Shell - Permissions
 
 ## Learning Objectives
 * File and Directory permissions
