@@ -1,4 +1,4 @@
-# System Engineering and DevOps Course
+# System Engineering and DevOps
 
 ## Course Description
 The ALX Full Stack Engineering Track's first 9 months aim to build a set of real-world, industry aligned skills. As the third sprint of the Foundations program, the System Engineering and DevOps course is geared towards developing foundational understanding in Linux and Unix System Programming, Networking Principles, Web Architecture, and Continuous Integration / Continuous Deployment. 
@@ -49,5 +49,6 @@ Instead of the typical terminological usage, 'Project' in ALX refers to a compil
 * [0x12-web_stack_debugging_2](https://github.com/Speck249/alx-system_engineering-devops/tree/master/0x12-web_stack_debugging_2)
 * [0x17-web_stack_debugging_3](https://github.com/Speck249/alx-system_engineering-devops/tree/master/0x17-web_stack_debugging_3)
 * [0x1B-web_stack_debugging_4](https://github.com/Speck249/alx-system_engineering-devops/tree/master/0x1B-web_stack_debugging_4)
+
 
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
