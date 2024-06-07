@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 #until loop prints string 10x
-
 s=0
 until [ $s == 10 ]
 do
-  echo "Best School"
+  echo 'Best School'
   s=$((s+1))
 done
