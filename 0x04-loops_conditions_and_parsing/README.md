@@ -1,13 +1,19 @@
-0x04. Loops, conditions and parsing
+# Bash - Loops, Conditions and Parsing
 
-0. Create a SSH RSA key pair
-1. For Best School loop
-2. While Best School loop
-3. Until Best School loop
-4. If 9, say Hi!
-5. 4 bad luck, 8 is your chance
-6. Superstitious numbers
-7. Display the time for 12 hours and 59 minutes
-8. For ls
-9. To file, or not to file
-10. FizzBuzz
+## Learning Objectives
+* Create SSH keys
+* #!/usr/bin/env bash vs #!/bin/bash
+* while, until and for loops
+* if, else, elif and case condition statements
+* cut command
+* Files and other comparison operators
+
+### Project Requirements
+* Allowed editors: vi, vim, emacs
+* Do not use awk
+* Bash script files must be executable
+* Bash script must pass Shellcheck (version 0.7.0)
+* File's first line must be exactly #!/usr/bin/env bash
+* File's second line must be a comment
+
+![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
