@@ -50,5 +50,4 @@ Instead of the typical terminological usage, 'Project' in ALX refers to a compil
 * [0x17-web_stack_debugging_3](https://github.com/Speck249/alx-system_engineering-devops/tree/master/0x17-web_stack_debugging_3)
 * [0x1B-web_stack_debugging_4](https://github.com/Speck249/alx-system_engineering-devops/tree/master/0x1B-web_stack_debugging_4)
 
-<br />
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
