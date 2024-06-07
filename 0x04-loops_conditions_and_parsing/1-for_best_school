@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #for loop prints string 10x
-
 for ((s=0; s < 10; s++))
 do
- echo "Best School"
+ echo 'Best School'
 done
