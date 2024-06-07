@@ -1,16 +1,14 @@
 #!/usr/bin/env bash
 #while loop prints string 10x
-
 s=1
-
 while [ $s -le 10 ]; 
 do
   if [ $s -eq 4 ]; then
-  echo "bad luck"
+  echo 'bad luck'
   elif [ $s -eq 8 ]; then
-  echo "good luck"
+  echo 'good luck'
   else
-  echo "Best School"
+  echo 'Best School'
   fi
   s=$((s+1))
 done
