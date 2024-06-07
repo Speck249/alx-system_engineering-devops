@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-#display SIGTERM msg
-
+#display string infinitely, and message upon termination
 trap 'echo "I am invincible!!!"' SIGTERM
-
 while true
 do
-  echo "To infinity and beyond"
+  echo 'To infinity and beyond'
   sleep 2
 done
