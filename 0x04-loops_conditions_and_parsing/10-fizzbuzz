@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
 #the fizzbuzz challenge
-
 for s in {1..100}
 do
   if ((s % 3 == 0 && s % 5 == 0))
   then
-   echo "FizzBuzz"
+   echo 'FizzBuzz'
   elif ((s % 3 == 0))
   then
-   echo "Fizz"
+   echo 'Fizz'
   elif ((s % 5 == 0))
   then
-   echo "Buzz"
+   echo 'Buzz'
   else
   echo $s
   fi
