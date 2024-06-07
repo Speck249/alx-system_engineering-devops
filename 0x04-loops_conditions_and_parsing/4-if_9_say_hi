@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 #while loop prints string 10x
-
 s=1
-
 while [ $s -le 10 ]; 
 do
-  echo "Best School"
+  echo 'Best School'
   if [ $s -eq 9 ]; then
-  echo "Hi"
+  echo 'Hi'
   fi
   s=$((s+1))
 done
