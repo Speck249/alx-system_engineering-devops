@@ -18,4 +18,5 @@
 * Module documentation (python3 -c 'print(__import__("my_module").__doc__)')
 * Code should not be executed when imported (if __name__ == "__main__":)
 
+
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
