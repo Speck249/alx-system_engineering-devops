@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #display current directory content
-
 for s in *
 do
-  echo "$s" | cut -d '-' -f2
+  echo '$s' | cut -d '-' -f2
 done
