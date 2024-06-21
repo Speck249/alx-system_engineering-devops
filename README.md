@@ -1,7 +1,7 @@
 # System Engineering and DevOps
 
 ## Course Description
-The ALX Full Stack Engineering Track's first 9 months aim to build a set of real-world, industry aligned skills. As the third sprint of the Foundations program, the System Engineering and DevOps course is geared towards developing foundational understanding in Linux and Unix System Programming, Networking Principles, Web Architecture, and Continuous Integration / Continuous Deployment. 
+ALX Full Stack Engineering Track's first 9 months aim to build a set of real-world, industry aligned skills. As the third sprint of the Foundations program, the System Engineering and DevOps course is geared towards developing foundational understanding in Linux and Unix System Programming, Networking Principles, Web Architecture, and Continuous Integration / Continuous Deployment. 
 
 Instead of the typical terminological usage, 'Project' in ALX refers to a compilation of practical tasks that test students' knowledge about curriculum specific topics. Each project must be completed within a 24 hour timeline and although projects may advance on an earlier subject area, no two projects focus on the same topic. Projects are packed with thorough guidelines, general outlines of learning objectives and requirements. The System Engineering and DevOps projects range from scripting and virtual server configurations to debugging exercises. 
 
